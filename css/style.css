@@ -60,7 +60,7 @@
         flex-direction: column;
       }
 
-@media screen and (max-width: 815px) { 
+@media (max-width: 815px) { 
     
   main {
     margin-top: 100px;
@@ -81,5 +81,11 @@
   }
   .table-title{
     margin-top: 0.8em;
+  }
+}
+
+@media (max-width: 630px) { 
+  main {
+    margin-top: 140px;
   }
 }
