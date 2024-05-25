@@ -166,8 +166,15 @@
 }
 
 @media (max-width: 630px) { 
+  .layout {
+    display: grid;
+    grid-template-rows: 150px [main-start] 1fr [main-end] 150px;
+    grid-template-columns: 20px [main-start] 1fr [main-end] 20px;
+  }
+
   main {
     margin-top: 100px;
+    grid-area: main;
   }
   h2 span {
     top: -290px;
