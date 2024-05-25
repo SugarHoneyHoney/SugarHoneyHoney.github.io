@@ -7,8 +7,8 @@
 
       .layout {
         display: grid;
-        grid-template-rows: 130px [main-start] 1fr [main-end] 150px ;
-        grid-template-columns: 1fr [main-start] 3fr [main-end] 5em ;
+        grid-template-rows: 130px [main-start] 1fr [main-end] 150px;
+        grid-template-columns: 200px [main-start] 3fr [main-end] 5em;
       }
       .nav-link{
           color: rgba(17, 26, 66, 0.985);
@@ -20,7 +20,7 @@
           background-color: #6074ac;
           width: 100%;
           position: fixed;
-          top: 0
+          top: 0;
       }
 
       .logo{
@@ -28,13 +28,37 @@
           padding: 5px 5px;
       }
 
+      h2 span {
+        position: relative;
+        top: -150px;
+        visibility: hidden;
+      }
+
       main {
         grid-area: main;
-        align-self: center;
+        justify-content: center;
+      }
+
+      dd {
+        text-align: justify;
+      }
+
+      ul {
+        list-style-type: square;
       }
 
       p {
         text-align: justify;
+      }
+
+      a:link, a:visited {
+        text-decoration: none;
+        color: rgb(37, 46, 94);
+      }
+
+      a:hover, a:focus, a:active {
+        text-decoration: none;
+        color: rgb(146, 219, 246);
       }
 
       .area-style {
@@ -58,20 +82,46 @@
         flex-direction: column;
       }
 
-      .main-title {
-        margin-left: -2em;
+      .midtext-img {
+        display: flex;
+        flex-direction: column;
+        float: right;
+        margin-left: 2em;
+        max-width: 200px;
+      }
+  
+      figcaption {
+        justify-content: center;
       }
 
-@media (max-width: 774px) { 
+      .picture-gallery {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 100%;
+      }
+
+      .subgallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+      }
+
+@media (max-width: 800px) { 
   .layout {
     display: grid;
-    grid-template-rows: 150px [main-start] 1fr [main-end] 150px ;
+    grid-template-rows: 150px [main-start] 1fr [main-end] 150px;
     grid-template-columns: 30px [main-start] 1fr [main-end] 30px;
   }
-    
+
   main {
-    margin-top: 100px;
+    margin-top: 50px;
     grid-area: main;
+  }
+
+  h2 span { /**/
+    top: -250px;
   }
 
   header {
@@ -88,7 +138,7 @@
         flex: 1 1 auto;
         position: fixed;
         justify-content: center;
-        margin-top: 150px;
+        margin-top: 100px;
         
   }
   #page-nav {
@@ -98,11 +148,28 @@
     margin-top: 0.8em;
   }
 
-  
+  .midtext-img {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    min-width: 190px;
+    float:none;
+  }
+
+  .picture-gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
 }
 
 @media (max-width: 630px) { 
   main {
-    margin-top: 140px;
+    margin-top: 100px;
+  }
+  h2 span {
+    top: -290px;
   }
 }
