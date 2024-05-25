@@ -108,7 +108,7 @@
         max-width: 100%;
       }
 
-@media (max-width: 800px) { 
+@media (max-width: 1280px) { 
   .layout {
     display: grid;
     grid-template-rows: 150px [main-start] 1fr [main-end] 150px;
@@ -168,8 +168,18 @@
 @media (max-width: 630px) { 
   .layout {
     display: grid;
-    grid-template-rows: 150px [main-start] 1fr [main-end] 150px;
+    grid-template-rows: 200px [main-start] 1fr [main-end] 150px;
     grid-template-columns: 20px [main-start] 1fr [main-end] 20px;
+  }
+
+  .content-table {
+        flex-direction: row;
+        width:100%;
+        flex: 1 1 auto;
+        position: fixed;
+        justify-content: center;
+        margin-top: 150px;
+        
   }
 
   main {
