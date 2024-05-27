@@ -95,6 +95,10 @@
         justify-content: center;
       }
 
+      #gallery {
+        width: 100%;
+      }
+
       .picture-gallery {
         display: flex;
         flex-direction: column;
