@@ -104,7 +104,7 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 100%;
+        width: 80%;
       }
 
       .subgallery {
@@ -115,7 +115,7 @@
       }
 
       video {
-        width: 100%;
+        width: 80%;
       }
 
 @media (max-width: 1280px) { 
@@ -166,12 +166,6 @@
     float:none;
   }
 
-  .picture-gallery {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-  }
 
 }
 
