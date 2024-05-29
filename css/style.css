@@ -121,7 +121,8 @@ p {
 .midtext-img {
   float: right;
   margin-left: 2em;
-  max-width: 250px;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .midtext-img img
