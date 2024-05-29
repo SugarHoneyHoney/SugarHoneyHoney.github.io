@@ -25,11 +25,6 @@ header {
   top: 0;
 }
 
-.logo{
-  width: 3em;
-  padding: 5px 5px;
-}
-
 .nav-link{
   color: rgba(17, 26, 66, 0.985);
   font-size: large;
@@ -61,7 +56,7 @@ main {
 
 /* This is to fix the reference for the page content. 
 This way the section title isn't hidden by the header */
-h2 span {
+h2 span, h1 span {
   position: relative;
   top: -150px;
   visibility: hidden;
@@ -81,13 +76,43 @@ p {
   text-align: justify;
 }
 
+.subgallery img, video {
+  max-width: 500px;
+  max-height: 300px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 3px;
+  border-radius: 10%;
+}
+
+.subgallery img:hover {
+  animation: expand 1s; /*Tem que corrigir*/
+  animation-fill-mode: forwards;
+  z-index:10;
+}
+
+.logo {
+  width: 3em;
+  padding: 5px 5px;
+  animation: none;
+  border-style: none;
+}
+
 /* The images for the paragraph are supposed to be on the right */
 .midtext-img {
   display: flex;
   flex-direction: column;
   float: right;
   margin-left: 2em;
-  max-width: 200px;
+  max-width: 250px;
+}
+
+.midtext-img img
+{
+  border-radius: 15%;
+  border-color: #ffffff;
+  border-width: 10px;
+  width: 100%;
 }
 
 emp {
@@ -99,18 +124,34 @@ dd {
 }
 
 ul {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   list-style-type: square;
 }
 
+.media {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  background-color: #aebdf8a3;
+  border-radius: 10%;
+}
+
+.media ul {
+  justify-content: space-between;
+  list-style-type: none;
+}
+
 #gallery {
-  width: 80%;
+  width: 100%;
 }
 
 .picture-gallery {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
 }
 
 .subgallery {
@@ -118,11 +159,12 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  margin: 2em;
+  justify-content: space-evenly;
 }
 
 video {
-  width: 80%;
+  width: 100%;
 }
 
 figcaption {
@@ -135,6 +177,8 @@ footer {
   width: 100%;
   grid-row: main-end / -1;
   grid-column: 1/ -1;
+  position: fixed;
+  bottom:0;
 }
 
 .footer-text {
@@ -142,18 +186,53 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   padding-top: 10px;
+  font-size: small;
 }
 
 h1 {
-  font-size: 24px;
+  width: 100%;
+  font-size: 56px;
   font-style: italic;
-  justify-content: center;
+  text-align: center;
+}
+
+input[type="checkbox"] { 
+  display: none; 
+} 
+
+/* Style the labels as buttons */ 
+label { 
+  display: block; 
+  padding: 10px 20px; 
+  background-color: #3498db; 
+  color: #fff; 
+  cursor: pointer; 
+  margin-bottom: 8px; 
+  border-radius: 3px; 
+}
+
+input[type="checkbox"]:checked+label { 
+  background-color: gray; 
+} 
+
+/* Hide the content divs by default */ 
+.content { 
+  display: none; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-top: none; 
+  border-radius: 0 0 5px 5px; 
+} 
+
+/* Show the content */ 
+input[type="checkbox"]:checked+label+.content { 
+  display: block; 
 }
 
 @media (max-width: 1280px) { 
   .layout {
     display: grid;
-    grid-template-rows: 150px [main-start] 1fr [main-end] 150px;
+    grid-template-rows: 150px [main-start] 1fr [main-end] 70px;
     grid-template-columns: 20px [main-start] 1fr [main-end] 20px;
   }
 
@@ -162,7 +241,7 @@ h1 {
     padding-top: 50px;
   }
 
-  h2 span { /**/
+  h1 span, h2 span { /**/
     top: -170px;
   }
 
@@ -202,7 +281,7 @@ h1 {
 @media (max-width: 630px) { 
   .layout {
     display: grid;
-    grid-template-rows: 200px [main-start] 1fr [main-end] 150px;
+    grid-template-rows: 200px [main-start] 1fr [main-end] 70px;
     grid-template-columns: 10px [main-start] 1fr [main-end] 10px;
   }
 
@@ -220,7 +299,28 @@ h1 {
     grid-area: main;
     padding-top: 50px;
   }
-  h2 span {
+
+  img {
+    max-width: 150px;
+    max-height: 200px;
+  }
+  
+
+  h1 {
+    width: 100%;
+    font-size: 40px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-style: italic;
+    text-align: center;
+  }
+
+  h1 span, h2 span{
     top: -300px;
   }
+}
+
+@keyframes expand {
+  from {transform: scale(1);}
+  to {transform: scale(1.15);}
 }
