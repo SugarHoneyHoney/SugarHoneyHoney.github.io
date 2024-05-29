@@ -27,7 +27,7 @@ header {
   background-color: #6781c8;
   width: 100%;
   position: fixed;
-  
+  z-index: 12;
   top: 0;
 }
 
@@ -44,6 +44,7 @@ header {
   position: fixed;
   justify-content: center;
   margin-top: 130px;
+  z-index: 12; /* This is to make it so that the images dont overlap the header*/
 }
 
 .table-title{
@@ -106,8 +107,6 @@ p {
 
 /* The images for the paragraph are supposed to be on the right */
 .midtext-img {
-  display: flex;
-  flex-direction: column;
   float: right;
   margin-left: 2em;
   max-width: 250px;
@@ -144,9 +143,13 @@ ul {
   border-radius: 10%;
 }
 
-.media ul {
-  justify-content: space-between;
+.content ul {
+  justify-content: space-evenly;
   list-style-type: none;
+}
+
+.content li {
+  font-weight: 300;
 }
 
 .picture-gallery {
@@ -160,7 +163,7 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  margin: 2em;
+  margin: 5px 5px;
   justify-content: space-evenly;
 }
 
@@ -169,7 +172,7 @@ video {
 }
 
 figcaption {
-  justify-content: center;
+  text-align: center;
 }
 
 footer {
@@ -209,7 +212,7 @@ input[type="checkbox"] {
 label { 
   display: block; 
   padding: 10px 20px; 
-  background-color: #3498db; 
+  background-color: #384577; 
   color: #fff; 
   cursor: pointer; 
   margin-bottom: 8px; 
@@ -217,7 +220,7 @@ label {
 }
 
 input[type="checkbox"]:checked+label { 
-  background-color: gray; 
+  background-color: #6781c8; 
 } 
 
 /* Hide the content divs by default */ 
@@ -324,7 +327,7 @@ input[type="checkbox"]:checked+label+.content {
   }
 
   h1 span, h2 span{
-    top: -300px;
+    top: -200px;
   }
 }
 
