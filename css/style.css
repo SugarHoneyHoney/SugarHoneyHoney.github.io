@@ -149,7 +149,7 @@ footer {
   }
 
   h2 span { /**/
-    top: -180px;
+    margin-top: 180px;
   }
 
   header {
@@ -207,6 +207,6 @@ footer {
     padding-top: 100px;
   }
   h2 span {
-    top: -300px;
+    padding-top: 120px;
   }
 }
