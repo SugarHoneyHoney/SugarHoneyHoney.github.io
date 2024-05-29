@@ -145,7 +145,7 @@ footer {
 
   main {
     grid-area: main;
-    margin-top: 50px;
+    padding-top: 50px;
   }
 
   h2 span { /**/
@@ -204,9 +204,9 @@ footer {
 
   main {
     grid-area: main;
-    margin-top: 100px;
+    padding-top: 100px;
   }
   h2 span {
-    top: -400px;
+    top: -300px;
   }
 }
