@@ -60,6 +60,7 @@ main {
   grid-area: main;
   margin: 10px 10px;
   justify-content: center;
+  max-width: 100%;
 }
 
 /* This is to fix the reference for the page content. 
