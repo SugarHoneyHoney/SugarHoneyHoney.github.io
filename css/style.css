@@ -1,122 +1,140 @@
 @charset "UTF-8";
-      body {
-        background-color: #ffffff;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23B5C9FF'/%3E%3Cstop offset='1' stop-color='%23384577'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='82' height='82' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='41' cy='41' r='41'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.02'/%3E%3C/svg%3E");
-        background-attachment: fixed;
-        color: black;
-      }
 
-      .layout {
-        display: grid;
-        grid-template-rows: 130px [main-start] 1fr [main-end] 150px;
-        grid-template-columns: 200px [main-start] 3fr [main-end] 5em;
-      }
-      .nav-link{
-          color: rgba(17, 26, 66, 0.985);
-          font-size: large;
-          padding-top: 1em;
-      }
+/* Items are organized relative to their appearance and importance for the style*/
 
-      header {
-          background-color: #6074ac;
-          width: 100%;
-          position: fixed;
-          top: 0;
-      }
+body {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23B5C9FF'/%3E%3Cstop offset='1' stop-color='%23384577'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='82' height='82' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='41' cy='41' r='41'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.02'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  color: black;
+}
 
-      .logo{
-          width: 3em;
-          padding: 5px 5px;
-      }
+/* This is a grid style, only to fix the position of the main section and footer */
+.layout {
+  display: grid;
+  grid-template-rows: 130px [main-start] 1fr [main-end] 3em;
+  grid-template-columns: 200px [main-start] 3fr [main-end] 3em;
+}
 
-      h2 span {
-        position: relative;
-        top: -150px;
-        visibility: hidden;
-      }
+header {
+  background-color: #66759e;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
 
-      main {
-        grid-area: main;
-        margin: 10px 10px;
-        justify-content: center;
-      }
+.logo{
+  width: 3em;
+  padding: 5px 5px;
+}
 
-      dd {
-        text-align: justify;
-      }
+.nav-link{
+  color: rgba(17, 26, 66, 0.985);
+  font-size: large;
+  padding-top: 1em;
+}
 
-      ul {
-        list-style-type: square;
-      }
+/* The content table should be to the left */
+.content-table {
+  display:flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: center;
+  margin-top: 130px;
+}
 
-      p {
-        text-align: justify;
-      }
+.table-title{
+  margin-left: 1em;
+}
 
-      a:link, a:visited {
-        text-decoration: none;
-        color: rgb(37, 46, 94);
-      }
+#page-nav {
+  flex-direction: column;
+}
 
-      a:hover, a:focus, a:active {
-        text-decoration: none;
-        color: rgb(146, 219, 246);
-      }
+main {
+  grid-area: main;
+  margin: 10px 10px;
+  justify-content: center;
+}
 
-      .area-style {
-        border: 1px solid #ccc;
-        padding-top: 2em;
-      }
+/* This is to fix the reference for the page content. 
+This way the section title isn't hidden by the header */
+h2 span {
+  position: relative;
+  top: -150px;
+  visibility: hidden;
+}
 
-      .content-table {
-        display:flex;
-        flex-direction: column;
-        position: fixed;
-        justify-content: center;
-        margin-top: 130px;
-      }
+a:link, a:visited {
+  text-decoration: none;
+  color: rgb(37, 46, 94);
+}
 
-      .table-title{
-        margin-left: 1em;
-      }
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: rgb(146, 219, 246);
+}
 
-      #page-nav {
-        flex-direction: column;
-      }
+p {
+  text-align: justify;
+}
 
-      .midtext-img {
-        display: flex;
-        flex-direction: column;
-        float: right;
-        margin-left: 2em;
-        max-width: 200px;
-      }
-  
-      figcaption {
-        justify-content: center;
-      }
+/* The images for the paragraph are supposed to be on the right */
+.midtext-img {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-left: 2em;
+  max-width: 200px;
+}
 
-      #gallery {
-        width: 80%;
-      }
+emp {
+  font-style: italic;
+}
 
-      .picture-gallery {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 80%;
-      }
+dd {
+  text-align: justify;
+}
 
-      .subgallery {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-      }
+ul {
+  list-style-type: square;
+}
 
-      video {
-        width: 80%;
-      }
+#gallery {
+  width: 80%;
+}
+
+.picture-gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.subgallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+video {
+  width: 80%;
+}
+
+figcaption {
+  justify-content: center;
+}
+
+footer {
+  background-color: #384577;
+  color:white;
+  width: 100%;
+  grid-row: main-end / -1;
+  grid-column: 1/ -1;
+}
+
 
 @media (max-width: 1280px) { 
   .layout {
@@ -140,17 +158,16 @@
     position: fixed;
     top: 0
 }
-
-  .content-table {
-    background-color: #6074ac;
-        flex-direction: row;
-        width:100%;
-        flex: 1 1 auto;
-        position: fixed;
-        justify-content: center;
-        margin-top: 100px;
-        
-  }
+.content-table {
+  background-color: #6074ac;
+  flex-direction: row;
+  width:100%;
+  flex: 1 1 auto;
+  position: fixed;
+  justify-content: center;
+  margin-top: 100px;
+      
+}
   #page-nav {
     flex-direction: row;
   }
@@ -166,7 +183,6 @@
     float:none;
   }
 
-
 }
 
 @media (max-width: 630px) { 
@@ -177,12 +193,12 @@
   }
 
   .content-table {
-        flex-direction: row;
-        width:100%;
-        flex: 1 1 auto;
-        position: fixed;
-        justify-content: center;
-        margin-top: 150px;
+    flex-direction: row;
+    width:100%;
+    flex: 1 1 auto;
+    position: fixed;
+    justify-content: center;
+    margin-top: 150px;
         
   }
 
@@ -191,6 +207,6 @@
     margin-top: 100px;
   }
   h2 span {
-    top: -300px;
+    top: -400px;
   }
 }
