@@ -56,6 +56,7 @@ header {
 }
 
 main {
+  font-size: larger;
   grid-area: main;
   margin: 10px 10px;
   justify-content: center;
@@ -303,7 +304,7 @@ input[type="checkbox"]:checked+label+.content {
 
 }
 
-@media only screen and (max-width: 630px) { 
+@media only screen and (max-width: 560px) { 
   .layout {
     display: grid;
     grid-template-rows: 200px [main-start] 1fr [main-end] 70px;
