@@ -305,11 +305,13 @@ input[type="checkbox"]:checked+label+.content {
 
 }
 
-@media only screen and (max-width: 560px) { 
+@media (max-width: 600px) { 
   .layout {
     display: grid;
     grid-template-rows: 200px [main-start] 1fr [main-end] 70px;
-    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-columns: [main-start] 400px [main-end];
+    text-align: center;
+    width: 100%;
   }
 
   .content-table {
@@ -327,9 +329,9 @@ input[type="checkbox"]:checked+label+.content {
     padding-top: 50px;
   }
 
-  img {
-    max-width: 150px;
-    max-height: 200px;
+  .subgallery img, video {
+    max-width: 250px;
+    max-height: 250px;
   }
   
 
