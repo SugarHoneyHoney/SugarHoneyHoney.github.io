@@ -327,6 +327,7 @@ input[type="checkbox"]:checked+label+.content {
   main {
     grid-area: main;
     padding-top: 50px;
+    padding-left: 5px;
   }
 
   .subgallery img, video {
