@@ -201,6 +201,7 @@ footer {
   grid-column: 1/ -1;
   position: fixed;
   bottom:0;
+  z-index: 12;
 }
 
 .footer-text {
